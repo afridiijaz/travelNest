@@ -1,0 +1,60 @@
+<% layout("../layouts/basic.ejs") %>
+  
+
+ 
+
+    <div class="row ">
+      <div class="col-8 offset-2">
+
+    <h3 class="mt-4">Create a new listing</h3>
+     
+    <form action="/listings" method="POST" novalidate  class="needs-validation"  enctype="multipart/form-data">
+      <div class="mt-3">
+        <label for="title" class="form-label">Title</label>
+        <input  required type="text" name="listing[title]" placeholder="Add catchy title" class="form-control">
+        <div class="valid-feedback">Title is perfect </div>
+        <div class="invalid-feedback">Title is should be valid</div>
+
+      </div>
+        <div class="mt-3">
+          <label for="description" class="form-label">Description</label>
+          <textarea required type="text" class="form-control" name="listing[description]" placeholder="Enter Description"></textarea>
+          <div class="invalid-feedback">Description should be to the point </div>
+        
+        </div>
+        
+        <div class="mt-3">
+          <label for="image" class="form-label">upload listing image </label>
+          <input type="file" name="listing[image]"  class="form-control" required><br>
+          
+        </div>
+
+        <div class="row">
+        <div class="mt-3 col-md-4">
+          <label for="price" class="form-label">Price</label>
+          <input required type="text" name="listing[price]" placeholder="19,000" class="form-control">
+          <div class="invalid-feedback">Price must be number</div>
+        
+        </div>
+
+        <div class="mt-3 col-md-8">
+          <label for="country" class="form-label">Country</label>
+          <input required type="text" name="listing[country]" placeholder="Pakistan" class="form-control">
+        <div class="invalid-feedback">Country name should be valid</div>
+          
+        </div>
+        
+      </div>
+        <div class="mt-3">
+          <label for="location" class="form-label">Location</label>
+          <input required type="text" name="listing[location]" placeholder="Bara,Khyber Agency" class="form-control">
+          <div class="invalid-feedback">Location should be valid</div>
+        </div>
+        
+        
+        <button class="btn btn-dark add-btn mb-4 mt-4" >Add</button>
+          
+    </form>
+     
+  </div>
+</div>

@@ -1,0 +1,8 @@
+pass: aUKTOySA5fZgGJEZ
+usrnme : afridiijaz520
+
+database: mongodb+srv://afridiijaz520:<db_password>@cluster0.m1yfl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+
+eg
+mongodb+srv://afridiijaz520:aUKTOySA5fZgGJEZ@cluster0.m1yfl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
