@@ -109,10 +109,16 @@ app.get("/demouser", async(req,res)=>{
    res.send(registeredUser);
 }) */
 app.use("/listings",listingRouter);
-app.use("/",listingRouter)
-app.use("/listings/:id/reviews",reviewRouter)
-app.use("/",userRouter);
 
+app.use("/listings/:id/reviews",reviewRouter)
+app.use("/user",userRouter);
+app.use("/",(req,res,next)=>{
+    if(req.url=="/"){
+        res.redirect("/listings")
+    }else {
+        next(new ExpressError(404,"Page not found")); 
+    }
+})
 
 //page not found error message
 app.all("*",(req,res,next)=>{

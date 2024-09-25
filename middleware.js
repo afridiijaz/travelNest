@@ -9,7 +9,7 @@ module.exports.isLoggedIn = (req,res,next)=>{
        // console.log(req.path ," .. ",req.originalUrl);
         req.session.redirectUrl = req.originalUrl;
     req.flash("error","you must be logged in for creating listings");
-    return  res.redirect("/login")
+    return  res.redirect("/user/login")
  }
 
  next();
