@@ -109,9 +109,10 @@ app.get("/demouser", async(req,res)=>{
    res.send(registeredUser);
 }) */
 app.use("/listings",listingRouter);
+app.use("/",listingRouter)
 app.use("/listings/:id/reviews",reviewRouter)
 app.use("/",userRouter);
-app.use("https://travelnest-6zeq.onrender.com/",listingRouter)
+
 
 //page not found error message
 app.all("*",(req,res,next)=>{
